@@ -6,3 +6,12 @@
 .textclass{
 	text-align: center;
 }
+.displayContainer{
+	    margin-top: 23px;
+    margin-left: 160px;
+    height: 477px;
+    width: 456px;
+    background-color: #ebf0f4;
+    border: 2px solid #00000036;
+    border-radius: 22px;	
+}

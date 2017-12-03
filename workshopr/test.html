@@ -7,6 +7,25 @@
    
 <script>
 $(document).ready(function(){
+//alert("click")
+$("#save").on('click',function(){
+var elementindex=$(".name").length+1
+ 
+var remindername=$("#remindername").val();
+var reminderdate=$("#reminderdate").val();
+$(".reminders").append('<p class="name"> name :'+elementindex+" "+remindername+"  date"+reminderdate+'</p>')
+$("#remindername").val('')
+
+$(".reminders p").on('click',function(){
+$(this).remove()
+})
+
+$("#showall").on('click',function(){
+$(".reminders p").show();	
+})
+
+})
+
 
 
 
@@ -23,10 +42,13 @@ $(document).ready(function(){
 <p class="paraClass">Hello World</p>
  
 <div class ="textclass">
- <input type="text" placeholder="reminder name" />
-<input type="date" placeholder="reminder time"/>
-<button>save</button>
- 
+ <input type="text"  id="remindername"placeholder="reminder name" />
+<input type="date" id="reminderdate"placeholder="reminder time"/>
+<button id="save">save</button>
+<button id="showall">show all</button>
+ <div class="displayContainer">
+ <h2 class="reminders">reminders</h2>
+ </div>
 </div>
 </body>
 
